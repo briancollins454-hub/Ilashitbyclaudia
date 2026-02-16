@@ -72,8 +72,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left — Decorative portrait placeholder */}
             <Reveal>
-              <div className="relative">
-                <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-luxe-card border border-rose-gold/10 relative">
+              <div className="relative mb-6 sm:mb-8">
+                <div className="aspect-[3/4] rounded-3xl overflow-visible bg-luxe-card border border-rose-gold/10 relative">
                   {/* Artistic gradient background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-luxe-surface via-luxe-card to-luxe-dark" />
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -135,7 +135,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 {/* Accent badge */}
-                <div className="absolute -bottom-4 -left-4 glass-card px-6 py-4">
+                <div className="absolute -bottom-2 left-0 sm:-bottom-4 sm:-left-4 glass-card px-4 sm:px-6 py-3 sm:py-4">
                   <span className="font-display text-2xl text-warm-wood">
                     2019
                   </span>
@@ -327,7 +327,7 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
-            <div className="glass-card p-10 md:p-14 text-center relative overflow-hidden">
+            <div className="glass-card p-8 sm:p-10 md:p-14 text-center relative overflow-clip">
               <div
                 className="absolute top-0 right-0 w-64 h-64 rounded-full"
                 style={{

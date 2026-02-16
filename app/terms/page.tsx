@@ -19,7 +19,7 @@ export default function TermsPage() {
   return (
     <>
       {/* ═══ HERO ═══ */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
+      <section className="relative pt-32 pb-16 overflow-x-clip">
         <div className="absolute inset-0">
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px]"

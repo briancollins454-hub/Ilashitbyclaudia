@@ -95,7 +95,7 @@ export default function HomePage() {
   return (
     <>
       {/* ═══ HERO ═══ */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-x-clip">
         {/* Background layers */}
         <div className="absolute inset-0">
           {/* Radial glow */}
@@ -256,8 +256,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left — Image placeholder / decorative */}
             <Reveal>
-              <div className="relative">
-                <div className="aspect-[3/4] rounded-3xl overflow-hidden relative">
+              <div className="relative mb-8 sm:mb-10">
+                <div className="aspect-[3/4] rounded-3xl overflow-visible relative">
                   {/* Gradient placeholder acting as artistic image */}
                   <div className="absolute inset-0 bg-gradient-to-br from-luxe-card via-luxe-surface to-luxe-dark" />
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -289,7 +289,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 rounded-3xl border border-rose-gold/10" />
                 </div>
                 {/* Floating accent card */}
-                <div className="absolute -bottom-6 -right-6 glass-card p-6 max-w-[200px]">
+                <div className="absolute -bottom-4 right-0 sm:-bottom-6 sm:-right-6 glass-card p-4 sm:p-6 max-w-[180px] sm:max-w-[200px]">
                   <span className="font-display text-3xl text-rose-gold">7+</span>
                   <p className="text-xs text-cream/40 mt-1">Years of experience creating stunning lashes</p>
                 </div>
@@ -385,16 +385,16 @@ export default function HomePage() {
           </Reveal>
 
           <Reveal>
-            <div className="glass-card overflow-hidden">
+            <div className="glass-card overflow-x-auto">
               {/* Table header */}
-              <div className="grid grid-cols-3 gap-4 p-6 border-b border-rose-gold/10">
-                <div className="text-xs tracking-[3px] uppercase text-rose-gold/50">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 p-4 sm:p-6 border-b border-rose-gold/10 min-w-0">
+                <div className="text-[10px] sm:text-xs tracking-[2px] sm:tracking-[3px] uppercase text-rose-gold/50">
                   Treatment
                 </div>
-                <div className="text-xs tracking-[3px] uppercase text-rose-gold/50 text-center">
+                <div className="text-[10px] sm:text-xs tracking-[2px] sm:tracking-[3px] uppercase text-rose-gold/50 text-center">
                   Full Set
                 </div>
-                <div className="text-xs tracking-[3px] uppercase text-rose-gold/50 text-right">
+                <div className="text-[10px] sm:text-xs tracking-[2px] sm:tracking-[3px] uppercase text-rose-gold/50 text-right">
                   Infill
                 </div>
               </div>
@@ -408,17 +408,17 @@ export default function HomePage() {
               ].map((row, i) => (
                 <div
                   key={i}
-                  className={`grid grid-cols-3 gap-4 p-6 group hover:bg-rose-gold/[0.03] transition-colors ${
+                  className={`grid grid-cols-3 gap-2 sm:gap-4 p-4 sm:p-6 group hover:bg-rose-gold/[0.03] transition-colors min-w-0 ${
                     i < 4 ? 'border-b border-rose-gold/5' : ''
                   }`}
                 >
-                  <div className="font-display text-base text-cream/80 group-hover:text-cream transition-colors">
+                  <div className="font-display text-sm sm:text-base text-cream/80 group-hover:text-cream transition-colors break-words">
                     {row.name}
                   </div>
-                  <div className="font-display text-lg text-rose-gold text-center">
+                  <div className="font-display text-base sm:text-lg text-rose-gold text-center">
                     {row.full}
                   </div>
-                  <div className="font-display text-lg text-cream/50 text-right">
+                  <div className="font-display text-base sm:text-lg text-cream/50 text-right">
                     {row.infill}
                   </div>
                 </div>
@@ -437,7 +437,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══ TESTIMONIAL / SOCIAL PROOF ═══ */}
-      <section className="relative py-32 section-glow overflow-hidden">
+      <section className="relative py-32 section-glow overflow-x-clip">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
             <div className="text-center">
@@ -470,7 +470,7 @@ export default function HomePage() {
 
           {/* Stats */}
           <Reveal>
-            <div className="grid grid-cols-3 gap-8 mt-20 pt-16 border-t border-rose-gold/5">
+            <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-20 pt-16 border-t border-rose-gold/5">
               {[
                 { number: '7+', label: 'Years Experience' },
                 { number: '339+', label: 'Happy Followers' },
@@ -528,7 +528,7 @@ export default function HomePage() {
 
             <Reveal>
               <div className="relative">
-                <div className="aspect-square rounded-3xl overflow-hidden relative bg-luxe-card border border-rose-gold/10">
+                <div className="aspect-square rounded-3xl overflow-visible relative bg-luxe-card border border-rose-gold/10">
                   <div className="absolute inset-0 flex items-center justify-center">
                     {/* Decorative eye illustration */}
                     <svg viewBox="0 0 200 120" className="w-3/4 opacity-20">
@@ -566,7 +566,7 @@ export default function HomePage() {
       <section className="relative py-20">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
-            <div className="glass-card p-10 md:p-14 text-center relative overflow-hidden">
+            <div className="glass-card p-8 sm:p-10 md:p-14 text-center relative overflow-clip">
               {/* Background glow */}
               <div className="absolute top-0 right-0 w-64 h-64 rounded-full"
                 style={{ background: 'radial-gradient(circle, rgba(235,200,207,0.12) 0%, transparent 70%)' }} />

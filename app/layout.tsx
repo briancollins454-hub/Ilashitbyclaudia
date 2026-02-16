@@ -23,10 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-luxe-black text-cream antialiased">
+      <body className="bg-luxe-black text-cream antialiased overflow-x-hidden">
         <FloatingPetals />
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen overflow-x-clip">{children}</main>
         <Footer />
       </body>
     </html>

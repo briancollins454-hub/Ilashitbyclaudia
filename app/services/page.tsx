@@ -88,7 +88,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* ═══ HERO ═══ */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-32 pb-20 overflow-x-clip">
         {/* Background */}
         <div className="absolute inset-0">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px]"
@@ -154,7 +154,7 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Right — Pricing */}
-                  <div className="flex flex-col gap-4 min-w-[180px]">
+                  <div className="flex flex-col sm:flex-row lg:flex-col gap-4 sm:min-w-0 lg:min-w-[180px]">
                     <div className={`text-center p-5 rounded-2xl border ${
                       i % 3 === 0 ? 'bg-rose-gold/[0.03] border-rose-gold/10' :
                       i % 3 === 1 ? 'bg-blush-pink/[0.05] border-blush-pink/15' :
