@@ -146,23 +146,27 @@ body {
 /* ═══════════════════════════════════════════════════════
    LUXE GLASS CARD
    ═══════════════════════════════════════════════════════ */
-.glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(168, 191, 166, 0.15);
-  border-radius: 20px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-}
+@layer components {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(168, 191, 166, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    padding: 2.5rem;
+  }
 
-.glass-card:hover {
-  border-color: rgba(199, 157, 136, 0.30);
-  box-shadow:
-    0 8px 40px rgba(235, 200, 207, 0.10),
-    0 20px 60px rgba(0, 0, 0, 0.06);
-  transform: translateY(-4px);
+  .glass-card:hover {
+    border-color: rgba(199, 157, 136, 0.30);
+    box-shadow:
+      0 8px 40px rgba(235, 200, 207, 0.10),
+      0 20px 60px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px);
+  }
 }
 
 /* ═══════════════════════════════════════════════════════
