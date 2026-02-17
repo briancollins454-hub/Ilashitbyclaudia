@@ -181,7 +181,7 @@ export default function HomePage() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in stagger-6">
-          <span className="text-[10px] tracking-[3px] uppercase text-cream/20">Scroll</span>
+          <span className="text-[10px] tracking-wider uppercase text-cream/20">Scroll</span>
           <div className="w-[1px] h-8 bg-gradient-to-b from-rose-gold/30 to-transparent animate-float" />
         </div>
       </section>
@@ -227,11 +227,11 @@ export default function HomePage() {
                     {s.desc}
                   </p>
                   {/* Price */}
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between gap-4">
                     <span className={`text-2xl font-display ${i % 3 === 1 ? 'text-blush-pink' : i % 3 === 2 ? 'text-warm-wood' : 'text-rose-gold'}`}>
                       {s.price}
                     </span>
-                    <span className="text-xs tracking-widest uppercase text-cream/20">
+                    <span className="text-xs tracking-wider uppercase text-cream/20">
                       full set
                     </span>
                   </div>
@@ -290,14 +290,14 @@ export default function HomePage() {
                 </div>
                 {/* Experience badge — positioned below image */}
                 <div className="flex items-center gap-4 mt-6">
-                  <div className="glass-card px-6 py-4 flex items-center gap-4">
+                  <div className="glass-card px-7 py-5 flex items-center gap-4">
                     <span className="font-display text-4xl text-rose-gold">7+</span>
                     <div>
                       <p className="text-sm text-cream/70 font-display leading-tight">Years of</p>
                       <p className="text-sm text-cream/70 font-display leading-tight">Experience</p>
                     </div>
                   </div>
-                  <div className="glass-card px-6 py-4 flex items-center gap-4 flex-1">
+                  <div className="glass-card px-7 py-5 flex items-center gap-4 flex-1">
                     <span className="font-display text-4xl text-blush-pink">339+</span>
                     <div>
                       <p className="text-sm text-cream/70 font-display leading-tight">Happy</p>
@@ -405,14 +405,14 @@ export default function HomePage() {
               { name: 'Mega Volume', full: '£75', infill: '£65', duration: '2.5–3 hrs', color: 'blush-pink' },
             ].map((row, i) => (
               <Reveal key={i}>
-                <div className={`glass-card p-6 sm:p-7 h-full flex flex-col ${
+                <div className={`glass-card p-7 sm:p-8 h-full flex flex-col ${
                   i === 4 ? 'sm:col-span-2 lg:col-span-1 sm:max-w-sm sm:mx-auto lg:max-w-none' : ''
                 }`}>
                   <h3 className="font-display text-lg text-cream/90 mb-1">{row.name}</h3>
                   <p className="text-xs text-cream/30 font-body mb-5">{row.duration}</p>
-                  <div className="flex items-end justify-between mt-auto pt-4 border-t border-rose-gold/8">
+                  <div className="flex items-end justify-between gap-6 mt-auto pt-4 border-t border-rose-gold/8">
                     <div>
-                      <p className="text-[10px] tracking-[2px] uppercase text-cream/30 mb-1">Full Set</p>
+                      <p className="text-[10px] tracking-wider uppercase text-cream/30 mb-1">Full Set</p>
                       <p className={`font-display text-2xl ${
                         row.color === 'rose-gold' ? 'text-rose-gold' :
                         row.color === 'blush-pink' ? 'text-blush-pink' : 'text-warm-wood'
@@ -420,7 +420,7 @@ export default function HomePage() {
                     </div>
                     {row.infill && (
                       <div className="text-right">
-                        <p className="text-[10px] tracking-[2px] uppercase text-cream/30 mb-1">Infill</p>
+                        <p className="text-[10px] tracking-wider uppercase text-cream/30 mb-1">Infill</p>
                         <p className="font-display text-xl text-cream/55">{row.infill}</p>
                       </div>
                     )}
@@ -480,13 +480,13 @@ export default function HomePage() {
                 { number: '100%', label: 'Dedication' },
                 { number: '5★', label: 'Quality' },
               ].map((stat, i) => (
-                <div key={i} className="text-center">
+                <div key={i} className="text-center px-2">
                   <p className={`font-display text-2xl sm:text-3xl md:text-4xl ${
                     i === 0 ? 'text-rose-gold' : i === 1 ? 'text-blush-pink' : 'text-warm-wood'
                   }`}>
                     {stat.number}
                   </p>
-                  <p className="text-[10px] sm:text-xs tracking-widest uppercase text-cream/30 mt-2">
+                  <p className="text-[10px] sm:text-xs tracking-wider uppercase text-cream/30 mt-2">
                     {stat.label}
                   </p>
                 </div>
@@ -606,7 +606,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-luxe-card/50" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-80 group-hover:opacity-100 transition-opacity">
                     <span className="text-3xl">{item.icon}</span>
-                    <span className="text-xs tracking-[3px] uppercase text-cream/50 font-body">{item.label}</span>
+                    <span className="text-xs tracking-wider uppercase text-cream/50 font-body">{item.label}</span>
                   </div>
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-rose-gold/0 group-hover:bg-rose-gold/[0.04] transition-all duration-500 flex items-center justify-center">

@@ -128,7 +128,7 @@ export default function ServicesPage() {
                         {s.title}
                       </h2>
                       {i === 3 && (
-                        <span className="text-[10px] tracking-widest uppercase px-3 py-1 rounded-full border border-blush-pink/40 text-blush-pink bg-blush-pink/5">
+                        <span className="text-[10px] tracking-wider uppercase px-4 py-1 rounded-full border border-blush-pink/40 text-blush-pink bg-blush-pink/5">
                           Most Popular
                         </span>
                       )}
@@ -155,12 +155,12 @@ export default function ServicesPage() {
 
                   {/* Right — Pricing */}
                   <div className="flex flex-col sm:flex-row lg:flex-col gap-4 sm:min-w-0 lg:min-w-[180px]">
-                    <div className={`text-center p-5 rounded-2xl border ${
+                    <div className={`text-center p-6 rounded-2xl border ${
                       i % 3 === 0 ? 'bg-rose-gold/[0.03] border-rose-gold/10' :
                       i % 3 === 1 ? 'bg-blush-pink/[0.05] border-blush-pink/15' :
                       'bg-warm-wood/[0.04] border-warm-wood/10'
                     }`}>
-                      <span className={`text-xs tracking-[3px] uppercase block mb-2 ${
+                      <span className={`text-xs tracking-wider uppercase block mb-2 ${
                         i % 3 === 0 ? 'text-rose-gold/50' : i % 3 === 1 ? 'text-blush-pink/60' : 'text-warm-wood/50'
                       }`}>
                         Full Set
@@ -173,8 +173,8 @@ export default function ServicesPage() {
                       <p className="text-xs text-cream/30 mt-1">{s.duration}</p>
                     </div>
                     {s.infill !== '—' && (
-                      <div className="text-center p-4 rounded-2xl border border-rose-gold/5">
-                        <span className="text-xs tracking-[3px] uppercase text-cream/30 block mb-2">
+                      <div className="text-center p-5 rounded-2xl border border-rose-gold/5">
+                        <span className="text-xs tracking-wider uppercase text-cream/30 block mb-2">
                           Infill
                         </span>
                         <span className="font-display text-2xl text-cream/60">
