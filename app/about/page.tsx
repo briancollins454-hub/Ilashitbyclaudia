@@ -135,7 +135,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 {/* Accent badge */}
-                <div className="mt-4 inline-flex glass-card px-8 py-5">
+                <div className="mt-4 inline-flex glass-card" style={{ padding: '1.25rem 2rem' }}>
                   <div>
                     <span className="font-display text-2xl text-warm-wood">
                       2019
@@ -221,7 +221,7 @@ export default function AboutPage() {
               },
             ].map((v, i) => (
               <Reveal key={i}>
-                <div className="glass-card p-8 sm:p-10 h-full relative group">
+                <div className="glass-card h-full relative group" style={{ padding: '2.5rem' }}>
                   <span className={`font-display text-5xl absolute top-6 right-6 transition-colors duration-500 ${
                     i === 0 ? 'text-rose-gold/10 group-hover:text-rose-gold/25' :
                     i === 1 ? 'text-blush-pink/10 group-hover:text-blush-pink/25' :
@@ -329,7 +329,7 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-8">
           <Reveal>
-            <div className="glass-card p-10 sm:p-12 md:p-16 text-center relative overflow-clip">
+            <div className="glass-card text-center relative overflow-clip" style={{ padding: '3rem' }}>
               <div
                 className="absolute top-0 right-0 w-64 h-64 rounded-full"
                 style={{

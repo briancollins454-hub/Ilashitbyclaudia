@@ -119,7 +119,7 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto px-8 space-y-8">
           {services.map((s, i) => (
             <Reveal key={i}>
-              <div className="glass-card p-10 md:p-12 group">
+              <div className="glass-card group" style={{ padding: '2.5rem' }}>
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-8 items-start">
                   {/* Left content */}
                   <div>
@@ -244,7 +244,7 @@ export default function ServicesPage() {
               },
             ].map((item, i) => (
               <Reveal key={i}>
-                <div className="glass-card p-8 sm:p-10 h-full">
+                <div className="glass-card h-full" style={{ padding: '2.5rem' }}>
                   <span className="text-2xl mb-4 block">{item.icon}</span>
                   <h3 className="font-display text-lg text-cream/80 mb-3">
                     {item.title}

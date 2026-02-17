@@ -49,7 +49,7 @@ export default function TermsPage() {
       {/* ═══ CONTENT ═══ */}
       <section className="py-16 bg-luxe-gradient">
         <div className="max-w-3xl mx-auto px-8">
-          <div className="glass-card p-10 md:p-14 space-y-10">
+          <div className="glass-card space-y-10" style={{ padding: '2.5rem' }}>
 
             {/* Payment */}
             <div>

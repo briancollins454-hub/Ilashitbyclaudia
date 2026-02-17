@@ -209,7 +209,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s, i) => (
               <Reveal key={i} className={`stagger-${i + 1}`}>
-                <div className="glass-card p-8 sm:p-10 h-full flex flex-col group">
+                <div className="glass-card h-full flex flex-col group" style={{ padding: '2.5rem' }}>
                   {/* Icon */}
                   <div className={`w-14 h-14 rounded-full border flex items-center justify-center mb-6 transition-all duration-500 ${
                     i % 3 === 0 ? 'border-rose-gold/20 text-rose-gold/60 group-hover:border-rose-gold/50 group-hover:text-rose-gold' :
@@ -290,14 +290,14 @@ export default function HomePage() {
                 </div>
                 {/* Experience badge — positioned below image */}
                 <div className="flex items-center gap-4 mt-6">
-                  <div className="glass-card px-8 py-6 flex items-center gap-4">
+                  <div className="glass-card flex items-center gap-4" style={{ padding: '1.5rem 2rem' }}>
                     <span className="font-display text-4xl text-rose-gold">7+</span>
                     <div>
                       <p className="text-sm text-cream/70 font-display leading-tight">Years of</p>
                       <p className="text-sm text-cream/70 font-display leading-tight">Experience</p>
                     </div>
                   </div>
-                  <div className="glass-card px-8 py-6 flex items-center gap-4 flex-1">
+                  <div className="glass-card flex items-center gap-4 flex-1" style={{ padding: '1.5rem 2rem' }}>
                     <span className="font-display text-4xl text-blush-pink">339+</span>
                     <div>
                       <p className="text-sm text-cream/70 font-display leading-tight">Happy</p>
@@ -405,7 +405,7 @@ export default function HomePage() {
               { name: 'Mega Volume', full: '£75', infill: '£65', duration: '2.5–3 hrs', color: 'blush-pink' },
             ].map((row, i) => (
               <Reveal key={i}>
-                <div className={`glass-card p-8 sm:p-10 h-full flex flex-col ${
+                <div style={{ padding: '2.5rem' }} className={`glass-card h-full flex flex-col ${
                   i === 4 ? 'sm:col-span-2 lg:col-span-1 sm:max-w-sm sm:mx-auto lg:max-w-none' : ''
                 }`}>
                   <h3 className="font-display text-lg text-cream/90 mb-1">{row.name}</h3>
@@ -638,7 +638,7 @@ export default function HomePage() {
       <section className="relative py-20">
         <div className="max-w-4xl mx-auto px-8">
           <Reveal>
-            <div className="glass-card p-10 sm:p-12 md:p-16 text-center relative overflow-clip">
+            <div className="glass-card text-center relative overflow-clip" style={{ padding: '3rem' }}>
               {/* Background glow */}
               <div className="absolute top-0 right-0 w-64 h-64 rounded-full"
                 style={{ background: 'radial-gradient(circle, rgba(235,200,207,0.12) 0%, transparent 70%)' }} />
