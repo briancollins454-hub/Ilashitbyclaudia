@@ -256,8 +256,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left — Image placeholder / decorative */}
             <Reveal>
-              <div className="relative mb-8 sm:mb-10">
-                <div className="aspect-[3/4] rounded-3xl overflow-visible relative">
+              <div className="relative">
+                <div className="aspect-[3/4] rounded-3xl overflow-hidden relative">
                   {/* Gradient placeholder acting as artistic image */}
                   <div className="absolute inset-0 bg-gradient-to-br from-luxe-card via-luxe-surface to-luxe-dark" />
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -288,10 +288,22 @@ export default function HomePage() {
                   {/* Border glow */}
                   <div className="absolute inset-0 rounded-3xl border border-rose-gold/10" />
                 </div>
-                {/* Floating accent card */}
-                <div className="absolute -bottom-4 right-0 sm:-bottom-6 sm:-right-6 glass-card p-4 sm:p-6 max-w-[180px] sm:max-w-[200px]">
-                  <span className="font-display text-3xl text-rose-gold">7+</span>
-                  <p className="text-xs text-cream/40 mt-1">Years of experience creating stunning lashes</p>
+                {/* Experience badge — positioned below image */}
+                <div className="flex items-center gap-4 mt-6">
+                  <div className="glass-card px-6 py-4 flex items-center gap-4">
+                    <span className="font-display text-4xl text-rose-gold">7+</span>
+                    <div>
+                      <p className="text-sm text-cream/70 font-display leading-tight">Years of</p>
+                      <p className="text-sm text-cream/70 font-display leading-tight">Experience</p>
+                    </div>
+                  </div>
+                  <div className="glass-card px-6 py-4 flex items-center gap-4 flex-1">
+                    <span className="font-display text-4xl text-blush-pink">339+</span>
+                    <div>
+                      <p className="text-sm text-cream/70 font-display leading-tight">Happy</p>
+                      <p className="text-sm text-cream/70 font-display leading-tight">Followers</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Reveal>
@@ -384,50 +396,42 @@ export default function HomePage() {
             </div>
           </Reveal>
 
-          <Reveal>
-            <div className="glass-card overflow-x-auto">
-              {/* Table header */}
-              <div className="grid grid-cols-3 gap-2 sm:gap-4 p-4 sm:p-6 border-b border-rose-gold/10 min-w-0">
-                <div className="text-[10px] sm:text-xs tracking-[2px] sm:tracking-[3px] uppercase text-rose-gold/50">
-                  Treatment
-                </div>
-                <div className="text-[10px] sm:text-xs tracking-[2px] sm:tracking-[3px] uppercase text-rose-gold/50 text-center">
-                  Full Set
-                </div>
-                <div className="text-[10px] sm:text-xs tracking-[2px] sm:tracking-[3px] uppercase text-rose-gold/50 text-right">
-                  Infill
-                </div>
-              </div>
-              {/* Rows */}
-              {[
-                { name: 'Lash Lift + Tint', full: '£40', infill: '—' },
-                { name: 'Classic Lashes', full: '£50', infill: '£40' },
-                { name: 'Hybrid Lashes', full: '£50', infill: '£40' },
-                { name: 'Russian Volume', full: '£60', infill: '£45' },
-                { name: 'Mega Volume', full: '£75', infill: '£65' },
-              ].map((row, i) => (
-                <div
-                  key={i}
-                  className={`grid grid-cols-3 gap-2 sm:gap-4 p-4 sm:p-6 group hover:bg-rose-gold/[0.03] transition-colors min-w-0 ${
-                    i < 4 ? 'border-b border-rose-gold/5' : ''
-                  }`}
-                >
-                  <div className="font-display text-sm sm:text-base text-cream/80 group-hover:text-cream transition-colors break-words">
-                    {row.name}
-                  </div>
-                  <div className="font-display text-base sm:text-lg text-rose-gold text-center">
-                    {row.full}
-                  </div>
-                  <div className="font-display text-base sm:text-lg text-cream/50 text-right">
-                    {row.infill}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { name: 'Lash Lift + Tint', full: '£40', infill: null, duration: '45–60 min', color: 'warm-wood' },
+              { name: 'Classic Lashes', full: '£50', infill: '£40', duration: '1.5–2 hrs', color: 'rose-gold' },
+              { name: 'Hybrid Lashes', full: '£50', infill: '£40', duration: '2 hrs', color: 'blush-pink' },
+              { name: 'Russian Volume', full: '£60', infill: '£45', duration: '2–2.5 hrs', color: 'rose-gold' },
+              { name: 'Mega Volume', full: '£75', infill: '£65', duration: '2.5–3 hrs', color: 'blush-pink' },
+            ].map((row, i) => (
+              <Reveal key={i}>
+                <div className={`glass-card p-6 sm:p-7 h-full flex flex-col ${
+                  i === 4 ? 'sm:col-span-2 lg:col-span-1 sm:max-w-sm sm:mx-auto lg:max-w-none' : ''
+                }`}>
+                  <h3 className="font-display text-lg text-cream/90 mb-1">{row.name}</h3>
+                  <p className="text-xs text-cream/30 font-body mb-5">{row.duration}</p>
+                  <div className="flex items-end justify-between mt-auto pt-4 border-t border-rose-gold/8">
+                    <div>
+                      <p className="text-[10px] tracking-[2px] uppercase text-cream/30 mb-1">Full Set</p>
+                      <p className={`font-display text-2xl ${
+                        row.color === 'rose-gold' ? 'text-rose-gold' :
+                        row.color === 'blush-pink' ? 'text-blush-pink' : 'text-warm-wood'
+                      }`}>{row.full}</p>
+                    </div>
+                    {row.infill && (
+                      <div className="text-right">
+                        <p className="text-[10px] tracking-[2px] uppercase text-cream/30 mb-1">Infill</p>
+                        <p className="font-display text-xl text-cream/55">{row.infill}</p>
+                      </div>
+                    )}
                   </div>
                 </div>
-              ))}
-            </div>
-          </Reveal>
+              </Reveal>
+            ))}
+          </div>
 
           <Reveal>
-            <div className="text-center mt-10">
+            <div className="text-center mt-12">
               <Link href="/services" className="btn-outline-luxe">
                 Full Price List &amp; Details
               </Link>
@@ -472,15 +476,17 @@ export default function HomePage() {
           <Reveal>
             <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-20 pt-16 border-t border-rose-gold/5">
               {[
-                { number: '7+', label: 'Years Experience' },
-                { number: '339+', label: 'Happy Followers' },
                 { number: '4', label: 'Lash Styles' },
+                { number: '100%', label: 'Dedication' },
+                { number: '5★', label: 'Quality' },
               ].map((stat, i) => (
                 <div key={i} className="text-center">
-                  <p className="font-display text-3xl md:text-4xl text-gradient-gold">
+                  <p className={`font-display text-2xl sm:text-3xl md:text-4xl ${
+                    i === 0 ? 'text-rose-gold' : i === 1 ? 'text-blush-pink' : 'text-warm-wood'
+                  }`}>
                     {stat.number}
                   </p>
-                  <p className="text-xs tracking-widest uppercase text-cream/30 mt-2">
+                  <p className="text-[10px] sm:text-xs tracking-widest uppercase text-cream/30 mt-2">
                     {stat.label}
                   </p>
                 </div>
@@ -528,7 +534,7 @@ export default function HomePage() {
 
             <Reveal>
               <div className="relative">
-                <div className="aspect-square rounded-3xl overflow-visible relative bg-luxe-card border border-rose-gold/10">
+                <div className="aspect-square rounded-3xl overflow-hidden relative bg-luxe-card border border-rose-gold/10">
                   <div className="absolute inset-0 flex items-center justify-center">
                     {/* Decorative eye illustration */}
                     <svg viewBox="0 0 200 120" className="w-3/4 opacity-20">
@@ -559,6 +565,72 @@ export default function HomePage() {
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* ═══ INSTAGRAM / GALLERY CTA ═══ */}
+      <section className="relative py-32 section-glow">
+        <div className="max-w-5xl mx-auto px-6">
+          <Reveal>
+            <div className="text-center mb-14">
+              <div className="section-divider mb-6">
+                <div className="line" />
+                <div className="diamond" />
+                <div className="line" />
+              </div>
+              <h2 className="font-display text-4xl md:text-5xl text-cream/90 mb-4">
+                Follow the <span className="text-gradient-blush italic">Journey</span>
+              </h2>
+              <p className="text-cream/40 font-body max-w-md mx-auto">
+                See the latest lash transformations, behind-the-scenes moments, and client results on Instagram.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+              {[
+                { gradient: 'from-blush-pink/10 to-warm-wood/5', label: 'Classic', icon: '✨' },
+                { gradient: 'from-rose-gold/10 to-blush-pink/5', label: 'Hybrid', icon: '🌸' },
+                { gradient: 'from-warm-wood/10 to-rose-gold/5', label: 'Volume', icon: '💫' },
+                { gradient: 'from-rose-gold/8 to-warm-wood/5', label: 'Mega', icon: '🌟' },
+              ].map((item, i) => (
+                <a
+                  key={i}
+                  href="https://www.instagram.com/ilash__it"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative aspect-square rounded-2xl overflow-hidden border border-rose-gold/10 hover:border-rose-gold/30 transition-all duration-500"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient}`} />
+                  <div className="absolute inset-0 bg-luxe-card/50" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-80 group-hover:opacity-100 transition-opacity">
+                    <span className="text-3xl">{item.icon}</span>
+                    <span className="text-xs tracking-[3px] uppercase text-cream/50 font-body">{item.label}</span>
+                  </div>
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-rose-gold/0 group-hover:bg-rose-gold/[0.04] transition-all duration-500 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-cream/0 group-hover:text-cream/40 transition-all duration-500" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div className="text-center mt-10">
+              <a
+                href="https://www.instagram.com/ilash__it"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline-warm"
+              >
+                @ilash__it on Instagram
+              </a>
+            </div>
+          </Reveal>
         </div>
       </section>
 
