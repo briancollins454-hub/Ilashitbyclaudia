@@ -96,7 +96,7 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-dot-pattern opacity-20" />
         </div>
 
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
+        <div className="relative max-w-4xl mx-auto px-8 text-center">
           <div className="inline-flex items-center gap-3 mb-6 opacity-0 animate-fade-in">
             <div className="gold-line" />
             <span className="text-[11px] tracking-[5px] uppercase text-rose-gold/60 font-body">
@@ -116,10 +116,10 @@ export default function ServicesPage() {
 
       {/* ═══ SERVICES CARDS ═══ */}
       <section className="py-20 bg-luxe-gradient">
-        <div className="max-w-6xl mx-auto px-6 space-y-8">
+        <div className="max-w-6xl mx-auto px-8 space-y-8">
           {services.map((s, i) => (
             <Reveal key={i}>
-              <div className="glass-card p-8 md:p-10 group">
+              <div className="glass-card p-10 md:p-12 group">
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-8 items-start">
                   {/* Left content */}
                   <div>
@@ -193,7 +193,7 @@ export default function ServicesPage() {
 
       {/* ═══ IMPORTANT INFO ═══ */}
       <section className="py-32 section-glow">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-8">
           <Reveal>
             <div className="text-center mb-16">
               <div className="section-divider mb-6">
@@ -244,7 +244,7 @@ export default function ServicesPage() {
               },
             ].map((item, i) => (
               <Reveal key={i}>
-                <div className="glass-card p-7 h-full">
+                <div className="glass-card p-8 sm:p-10 h-full">
                   <span className="text-2xl mb-4 block">{item.icon}</span>
                   <h3 className="font-display text-lg text-cream/80 mb-3">
                     {item.title}
@@ -261,7 +261,7 @@ export default function ServicesPage() {
 
       {/* ═══ CTA ═══ */}
       <section className="py-24 bg-luxe-gradient">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="max-w-3xl mx-auto px-8 text-center">
           <Reveal>
             <div className="section-divider mb-8">
               <div className="line" />

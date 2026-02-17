@@ -49,7 +49,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-dot-pattern opacity-20" />
         </div>
 
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
+        <div className="relative max-w-4xl mx-auto px-8 text-center">
           <div className="inline-flex items-center gap-3 mb-6 opacity-0 animate-fade-in">
             <div className="gold-line" />
             <span className="text-[11px] tracking-[5px] uppercase text-rose-gold/60 font-body">
@@ -68,7 +68,7 @@ export default function AboutPage() {
 
       {/* ═══ STORY ═══ */}
       <section className="py-24 bg-luxe-gradient">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left — Decorative portrait placeholder */}
             <Reveal>
@@ -135,7 +135,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 {/* Accent badge */}
-                <div className="mt-4 inline-flex glass-card px-6 py-4">
+                <div className="mt-4 inline-flex glass-card px-8 py-5">
                   <div>
                     <span className="font-display text-2xl text-warm-wood">
                       2019
@@ -188,7 +188,7 @@ export default function AboutPage() {
 
       {/* ═══ VALUES ═══ */}
       <section className="py-32 section-glow">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-8">
           <Reveal>
             <div className="text-center mb-16">
               <div className="section-divider mb-6">
@@ -221,7 +221,7 @@ export default function AboutPage() {
               },
             ].map((v, i) => (
               <Reveal key={i}>
-                <div className="glass-card p-8 h-full relative group">
+                <div className="glass-card p-8 sm:p-10 h-full relative group">
                   <span className={`font-display text-5xl absolute top-6 right-6 transition-colors duration-500 ${
                     i === 0 ? 'text-rose-gold/10 group-hover:text-rose-gold/25' :
                     i === 1 ? 'text-blush-pink/10 group-hover:text-blush-pink/25' :
@@ -244,7 +244,7 @@ export default function AboutPage() {
 
       {/* ═══ JOURNEY TIMELINE ═══ */}
       <section className="py-32 bg-luxe-gradient">
-        <div className="max-w-3xl mx-auto px-6">
+        <div className="max-w-3xl mx-auto px-8">
           <Reveal>
             <div className="text-center mb-16">
               <div className="section-divider mb-6">
@@ -327,9 +327,9 @@ export default function AboutPage() {
 
       {/* ═══ REFERRAL CALLOUT ═══ */}
       <section className="py-20">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-8">
           <Reveal>
-            <div className="glass-card p-8 sm:p-10 md:p-14 text-center relative overflow-clip">
+            <div className="glass-card p-10 sm:p-12 md:p-16 text-center relative overflow-clip">
               <div
                 className="absolute top-0 right-0 w-64 h-64 rounded-full"
                 style={{
@@ -360,7 +360,7 @@ export default function AboutPage() {
 
       {/* ═══ CTA ═══ */}
       <section className="py-24 bg-luxe-gradient">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="max-w-3xl mx-auto px-8 text-center">
           <Reveal>
             <div className="section-divider mb-8">
               <div className="line" />

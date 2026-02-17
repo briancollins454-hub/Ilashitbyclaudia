@@ -29,7 +29,7 @@ export default function TermsPage() {
             }}
           />
         </div>
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
+        <div className="relative max-w-4xl mx-auto px-8 text-center">
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="gold-line" />
             <span className="text-[11px] tracking-[5px] uppercase text-rose-gold/60 font-body">
@@ -48,8 +48,8 @@ export default function TermsPage() {
 
       {/* ═══ CONTENT ═══ */}
       <section className="py-16 bg-luxe-gradient">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="glass-card p-8 md:p-12 space-y-10">
+        <div className="max-w-3xl mx-auto px-8">
+          <div className="glass-card p-10 md:p-14 space-y-10">
 
             {/* Payment */}
             <div>

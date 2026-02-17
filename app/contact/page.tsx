@@ -88,7 +88,7 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-dot-pattern opacity-20" />
         </div>
 
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
+        <div className="relative max-w-4xl mx-auto px-8 text-center">
           <div className="inline-flex items-center gap-3 mb-6 opacity-0 animate-fade-in">
             <div className="gold-line" />
             <span className="text-[11px] tracking-[5px] uppercase text-rose-gold/60 font-body">
@@ -108,11 +108,11 @@ export default function ContactPage() {
 
       {/* ═══ CONTACT FORM + INFO ═══ */}
       <section className="py-20 bg-luxe-gradient">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr,380px] gap-12">
             {/* Form */}
             <Reveal>
-              <div className="glass-card p-8 md:p-10">
+              <div className="glass-card p-10 md:p-12">
                 <h2 className="font-display text-2xl text-cream/90 mb-2">
                   Send an Enquiry
                 </h2>
@@ -262,7 +262,7 @@ export default function ContactPage() {
             {/* Info Cards */}
             <div className="space-y-6">
               <Reveal>
-                <div className="glass-card p-7">
+                <div className="glass-card p-8 sm:p-10">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full border border-rose-gold/20 flex items-center justify-center">
                       <svg className="w-4 h-4 text-rose-gold/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -280,7 +280,7 @@ export default function ContactPage() {
               </Reveal>
 
               <Reveal>
-                <div className="glass-card p-7">
+                <div className="glass-card p-8 sm:p-10">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full border border-blush-pink/25 flex items-center justify-center">
                       <svg className="w-4 h-4 text-blush-pink/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -297,7 +297,7 @@ export default function ContactPage() {
               </Reveal>
 
               <Reveal>
-                <div className="glass-card p-7">
+                <div className="glass-card p-8 sm:p-10">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full border border-warm-wood/20 flex items-center justify-center">
                       <svg className="w-4 h-4 text-warm-wood/70" fill="currentColor" viewBox="0 0 24 24">
@@ -321,7 +321,7 @@ export default function ContactPage() {
               </Reveal>
 
               <Reveal>
-                <div className="glass-card p-7">
+                <div className="glass-card p-8 sm:p-10">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full border border-blush-pink/25 flex items-center justify-center">
                       <svg className="w-4 h-4 text-blush-pink/70" fill="currentColor" viewBox="0 0 24 24">
@@ -343,7 +343,7 @@ export default function ContactPage() {
 
               {/* Important notes */}
               <Reveal>
-                <div className="glass-card p-7 border-warm-wood/15">
+                <div className="glass-card p-8 sm:p-10 border-warm-wood/15">
                   <h3 className="font-display text-base text-warm-wood/80 mb-3">
                     Before Booking
                   </h3>
