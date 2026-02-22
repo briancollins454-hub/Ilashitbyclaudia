@@ -46,19 +46,20 @@ function ProductCard({ product }: { product: Product }) {
   };
 
   return (
-    <div className="glass-card group flex flex-col h-full" style={{ padding: '0' }}>
+    <div className="glass-card group flex flex-col h-full relative" style={{ padding: '0' }}>
+      {/* Popular badge — outside the clipped image area */}
+      {product.featured && (
+        <div className="absolute top-4 left-4 z-20 px-4 py-2 rounded-full bg-rose-gold text-white text-sm font-bold tracking-wider uppercase font-body shadow-lg">
+          Popular
+        </div>
+      )}
       {/* Image area */}
-      <div className="relative aspect-square rounded-t-[20px] bg-luxe-surface overflow-visible">
+      <div className="relative aspect-square rounded-t-[20px] bg-luxe-surface overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <svg className="w-16 h-16 text-rose-gold/20 group-hover:text-rose-gold/30 transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.8}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
           </svg>
         </div>
-        {product.featured && (
-          <div className="absolute top-4 left-4 z-10 px-4 py-1.5 rounded-full bg-rose-gold text-white text-xs font-semibold tracking-wider uppercase font-body shadow-md">
-            Popular
-          </div>
-        )}
         {!product.inStock && (
           <div className="absolute inset-0 bg-luxe-black/40 flex items-center justify-center">
             <span className="text-white font-body text-sm tracking-wider">Sold Out</span>
