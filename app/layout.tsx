@@ -3,6 +3,8 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingPetals from '@/components/FloatingPetals';
+import CartSlider from '@/components/CartSlider';
+import { CartProvider } from '@/context/CartContext';
 
 export const metadata: Metadata = {
   title: 'ILash It — Lashes by Claudia | Ballymena',
@@ -24,10 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="bg-luxe-black text-cream antialiased overflow-x-hidden">
-        <FloatingPetals />
-        <Header />
-        <main className="min-h-screen overflow-x-clip">{children}</main>
-        <Footer />
+        <CartProvider>
+          <FloatingPetals />
+          <Header />
+          <CartSlider />
+          <main className="min-h-screen overflow-x-clip">{children}</main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

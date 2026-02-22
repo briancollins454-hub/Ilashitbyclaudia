@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useCart } from '@/context/CartContext';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -13,9 +14,12 @@ export default function Header() {
     return () => window.removeEventListener('scroll', h);
   }, []);
 
+  const { totalItems, setIsOpen } = useCart();
+
   const links = [
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
+    { href: '/shop', label: 'Shop' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Book Now' },
   ];
@@ -74,6 +78,21 @@ export default function Header() {
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-rose-gold transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
+          {/* Cart icon */}
+          <button
+            onClick={() => setIsOpen(true)}
+            className="relative ml-2 p-2 text-cream/60 hover:text-rose-gold transition-colors"
+            aria-label="Shopping bag"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            {totalItems > 0 && (
+              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-blush-pink text-white text-[9px] flex items-center justify-center font-body">
+                {totalItems}
+              </span>
+            )}
+          </button>
           <Link href="/contact" className="btn-luxe text-xs ml-4">
             Book a Session
           </Link>

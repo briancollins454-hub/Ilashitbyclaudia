@@ -82,6 +82,7 @@ export default function Footer() {
               {[
                 { href: '/', label: 'Home' },
                 { href: '/services', label: 'Services & Pricing' },
+                { href: '/shop', label: 'Shop' },
                 { href: '/about', label: 'About Claudia' },
                 { href: '/contact', label: 'Book Now' },
                 { href: '/terms', label: 'Terms & Conditions' },
