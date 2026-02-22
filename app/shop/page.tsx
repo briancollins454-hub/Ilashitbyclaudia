@@ -140,15 +140,15 @@ export default function ShopPage() {
           <Reveal>
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-12">
               {/* Category Filters */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {categories.map((cat) => (
                   <button
                     key={cat.value}
                     onClick={() => setActiveCategory(cat.value)}
-                    className={`px-5 py-2.5 rounded-full text-sm tracking-wider uppercase font-body font-medium transition-all duration-300 ${
+                    className={`px-6 py-3 rounded-full text-sm tracking-wider uppercase font-body font-semibold transition-all duration-300 ${
                       activeCategory === cat.value
-                        ? 'bg-rose-gold text-white'
-                        : 'bg-white/60 text-cream/60 border border-rose-gold/10 hover:border-rose-gold/30 hover:text-rose-gold'
+                        ? 'bg-rose-gold text-white shadow-md'
+                        : 'bg-white/80 text-cream/70 border border-rose-gold/15 hover:border-rose-gold/40 hover:text-rose-gold'
                     }`}
                   >
                     {cat.label}
