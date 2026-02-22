@@ -41,6 +41,11 @@ export async function POST(req: Request) {
       },
       success_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://ilashitbyclaudia.com'}/shop/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://ilashitbyclaudia.com'}/shop`,
+      metadata: {
+        items_summary: items.map((item: { name: string; quantity: number; price: number }) =>
+          `${item.name} x${item.quantity} (£${(item.price * item.quantity / 100).toFixed(2)})`
+        ).join(', '),
+      },
     });
 
     return NextResponse.json({ url: session.url });
