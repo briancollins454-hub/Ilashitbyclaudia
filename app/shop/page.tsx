@@ -118,7 +118,7 @@ export default function ShopPage() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(235,200,207,0.10),transparent_50%)]" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-8 text-center">
+        <div className="relative wrapper wrapper-md text-center">
           <Reveal>
             <span className="inline-block text-[11px] tracking-[4px] uppercase text-rose-gold/60 font-body mb-4">
               ILash It Shop
@@ -135,7 +135,7 @@ export default function ShopPage() {
 
       {/* ═══ SHOP CONTENT ═══ */}
       <section className="relative pb-32">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="wrapper wrapper-md">
           {/* Filters + Cart Button */}
           <Reveal>
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-12">

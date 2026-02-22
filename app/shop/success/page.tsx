@@ -17,7 +17,7 @@ export default function SuccessPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(168,191,166,0.15),transparent_60%)]" />
       </div>
 
-      <div className="relative max-w-lg mx-auto px-8 text-center">
+      <div className="relative wrapper wrapper-sm text-center">
         <div className="glass-card" style={{ padding: '3rem' }}>
           {/* Checkmark */}
           <div className="w-20 h-20 rounded-full bg-sage-400/10 flex items-center justify-center mx-auto mb-6">

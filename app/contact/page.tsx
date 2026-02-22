@@ -88,7 +88,7 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-dot-pattern opacity-20" />
         </div>
 
-        <div className="relative max-w-4xl mx-auto px-8 text-center">
+        <div className="relative wrapper wrapper-sm text-center">
           <div className="inline-flex items-center gap-3 mb-6 opacity-0 animate-fade-in">
             <div className="gold-line" />
             <span className="text-[11px] tracking-[5px] uppercase text-rose-gold/60 font-body">
@@ -108,7 +108,7 @@ export default function ContactPage() {
 
       {/* ═══ CONTACT FORM + INFO ═══ */}
       <section className="py-20 bg-luxe-gradient">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="wrapper wrapper-md">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr,380px] gap-12">
             {/* Form */}
             <Reveal>

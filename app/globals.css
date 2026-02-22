@@ -144,6 +144,32 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════
+   LAYOUT WRAPPERS — consistent centering & padding
+   ═══════════════════════════════════════════════════════ */
+.wrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;   /* 24px mobile */
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .wrapper { padding-left: 2.5rem; padding-right: 2.5rem; }   /* 40px */
+}
+@media (min-width: 1024px) {
+  .wrapper { padding-left: 4rem; padding-right: 4rem; }       /* 64px */
+}
+@media (min-width: 1280px) {
+  .wrapper { padding-left: 5rem; padding-right: 5rem; }       /* 80px */
+}
+
+/* Size variants — combine with .wrapper */
+.wrapper-sm  { max-width: 56rem; }   /* 896px — hero text, CTAs */
+.wrapper-md  { max-width: 68rem; }   /* 1088px — main sections */
+.wrapper-lg  { max-width: 76rem; }   /* 1216px — wide grids */
+
+/* ═══════════════════════════════════════════════════════
    LUXE GLASS CARD
    ═══════════════════════════════════════════════════════ */
 .glass-card {

@@ -137,7 +137,7 @@ export default function HomePage() {
         ))}
 
         {/* Content */}
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center wrapper wrapper-sm">
           {/* Badge */}
           <div className="inline-flex items-center gap-3 mb-8 opacity-0 animate-fade-in stagger-1">
             <div className="gold-line" />
@@ -188,7 +188,7 @@ export default function HomePage() {
 
       {/* ═══ SERVICES PREVIEW ═══ */}
       <section className="relative py-32 bg-luxe-gradient">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="wrapper wrapper-md">
           <Reveal>
             <div className="text-center mb-20">
               <div className="section-divider mb-6">
@@ -252,7 +252,7 @@ export default function HomePage() {
 
       {/* ═══ WHY CHOOSE SECTION ═══ */}
       <section className="relative py-32 section-glow">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="wrapper wrapper-md">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left — Image placeholder / decorative */}
             <Reveal>
@@ -379,7 +379,7 @@ export default function HomePage() {
 
       {/* ═══ PRICING HIGHLIGHTS ═══ */}
       <section className="relative py-32 bg-luxe-gradient">
-        <div className="max-w-5xl mx-auto px-8">
+        <div className="wrapper wrapper-md">
           <Reveal>
             <div className="text-center mb-16">
               <div className="section-divider mb-6">
@@ -442,7 +442,7 @@ export default function HomePage() {
 
       {/* ═══ TESTIMONIAL / SOCIAL PROOF ═══ */}
       <section className="relative py-32 section-glow overflow-x-clip">
-        <div className="max-w-4xl mx-auto px-8">
+        <div className="wrapper wrapper-sm">
           <Reveal>
             <div className="text-center">
               <div className="section-divider mb-8">
@@ -498,7 +498,7 @@ export default function HomePage() {
 
       {/* ═══ LASH LIFT SECTION ═══ */}
       <section className="relative py-32 bg-luxe-gradient">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="wrapper wrapper-md">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <Reveal>
               <div>
@@ -570,7 +570,7 @@ export default function HomePage() {
 
       {/* ═══ INSTAGRAM / GALLERY CTA ═══ */}
       <section className="relative py-32 section-glow">
-        <div className="max-w-5xl mx-auto px-8">
+        <div className="wrapper wrapper-md">
           <Reveal>
             <div className="text-center mb-14">
               <div className="section-divider mb-6">
@@ -636,7 +636,7 @@ export default function HomePage() {
 
       {/* ═══ REFERRAL BANNER ═══ */}
       <section className="relative py-20">
-        <div className="max-w-4xl mx-auto px-8">
+        <div className="wrapper wrapper-sm">
           <Reveal>
             <div className="glass-card text-center relative overflow-clip" style={{ padding: '3rem' }}>
               {/* Background glow */}
@@ -670,7 +670,7 @@ export default function HomePage() {
 
       {/* ═══ CTA ═══ */}
       <section className="relative py-32 bg-luxe-gradient">
-        <div className="max-w-3xl mx-auto px-8 text-center">
+        <div className="wrapper wrapper-sm text-center">
           <Reveal>
             <div className="section-divider mb-8">
               <div className="line" />
