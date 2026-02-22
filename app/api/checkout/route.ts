@@ -1,12 +1,20 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2026-01-28.clover',
-});
+function getStripe() {
+  if (!process.env.STRIPE_SECRET_KEY) {
+    throw new Error('STRIPE_SECRET_KEY is not set');
+  }
+  return new Stripe(process.env.STRIPE_SECRET_KEY, {
+    apiVersion: '2026-01-28.clover',
+  });
+}
+
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: Request) {
   try {
+    const stripe = getStripe();
     const { items } = await req.json();
 
     if (!items || items.length === 0) {
