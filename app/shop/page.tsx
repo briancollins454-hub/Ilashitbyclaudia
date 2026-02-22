@@ -48,14 +48,14 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <div className="glass-card group flex flex-col h-full" style={{ padding: '0' }}>
       {/* Image area */}
-      <div className="relative aspect-square rounded-t-[20px] bg-luxe-surface overflow-hidden">
+      <div className="relative aspect-square rounded-t-[20px] bg-luxe-surface overflow-visible">
         <div className="absolute inset-0 flex items-center justify-center">
           <svg className="w-16 h-16 text-rose-gold/20 group-hover:text-rose-gold/30 transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.8}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
           </svg>
         </div>
         {product.featured && (
-          <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-rose-gold/90 text-white text-[10px] tracking-wider uppercase font-body">
+          <div className="absolute top-4 left-4 z-10 px-4 py-1.5 rounded-full bg-rose-gold text-white text-xs font-semibold tracking-wider uppercase font-body shadow-md">
             Popular
           </div>
         )}
@@ -84,7 +84,7 @@ function ProductCard({ product }: { product: Product }) {
           <button
             onClick={handleAdd}
             disabled={!product.inStock || added}
-            className={`px-5 py-2.5 rounded-full text-xs tracking-wider uppercase font-body transition-all duration-300 ${
+            className={`px-6 py-3 rounded-full text-sm tracking-wider uppercase font-body font-semibold transition-all duration-300 ${
               added
                 ? 'bg-sage-400 text-white'
                 : product.inStock
@@ -145,7 +145,7 @@ export default function ShopPage() {
                   <button
                     key={cat.value}
                     onClick={() => setActiveCategory(cat.value)}
-                    className={`px-4 py-2 rounded-full text-xs tracking-wider uppercase font-body transition-all duration-300 ${
+                    className={`px-5 py-2.5 rounded-full text-sm tracking-wider uppercase font-body font-medium transition-all duration-300 ${
                       activeCategory === cat.value
                         ? 'bg-rose-gold text-white'
                         : 'bg-white/60 text-cream/60 border border-rose-gold/10 hover:border-rose-gold/30 hover:text-rose-gold'
@@ -159,7 +159,7 @@ export default function ShopPage() {
               {/* Cart Button */}
               <button
                 onClick={() => setIsOpen(true)}
-                className="relative flex items-center gap-2 px-5 py-2.5 rounded-full bg-rose-gold/10 text-rose-gold border border-rose-gold/20 hover:bg-rose-gold hover:text-white transition-all duration-300 text-xs tracking-wider uppercase font-body"
+                className="relative flex items-center gap-2 px-6 py-3 rounded-full bg-rose-gold/10 text-rose-gold border border-rose-gold/20 hover:bg-rose-gold hover:text-white transition-all duration-300 text-sm tracking-wider uppercase font-body font-medium"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
