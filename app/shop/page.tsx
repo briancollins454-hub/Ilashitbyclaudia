@@ -46,13 +46,7 @@ function ProductCard({ product }: { product: Product }) {
   };
 
   return (
-    <div className="glass-card group flex flex-col h-full relative" style={{ padding: '0' }}>
-      {/* Popular badge — outside the clipped image area */}
-      {product.featured && (
-        <div className="absolute top-4 left-4 z-20 px-4 py-2 rounded-full bg-rose-gold text-white text-sm font-bold tracking-wider uppercase font-body shadow-lg">
-          Popular
-        </div>
-      )}
+    <div className="glass-card group flex flex-col h-full" style={{ padding: '0', overflow: 'visible' }}>
       {/* Image area */}
       <div className="relative aspect-square rounded-t-[20px] bg-luxe-surface overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
@@ -69,6 +63,11 @@ function ProductCard({ product }: { product: Product }) {
 
       {/* Details */}
       <div className="flex flex-col flex-1" style={{ padding: '1.5rem' }}>
+        {product.featured && (
+          <span className="inline-block self-start mb-3 px-4 py-1.5 rounded-full bg-rose-gold text-white text-sm font-bold tracking-wider uppercase font-body">
+            Popular
+          </span>
+        )}
         <span className="text-[10px] tracking-[2px] uppercase text-rose-gold/60 font-body mb-2">
           {product.category.replace('-', ' ')}
         </span>
